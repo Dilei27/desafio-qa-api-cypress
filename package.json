@@ -1,0 +1,15 @@
+{
+  "name": "desafio-qa-api-cypress",
+  "version": "1.0.0",
+  "description": "Automação de testes API DOG com Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "15.7.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2"
+  }
+}

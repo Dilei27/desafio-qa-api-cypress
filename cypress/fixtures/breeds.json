@@ -1,0 +1,5 @@
+{
+  "validBreeds": ["hound", "akita", "retriever"],
+  "invalidBreeds": ["xpto123", "abcdef", "notadog"]
+}
+

@@ -1,0 +1,44 @@
+# ==========================
+#   NODE / CYPRESS
+# ==========================
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Cypress cache
+Cypress/
+cypress/.cache/
+cypress/videos/
+cypress/screenshots/
+
+# Mochawesome reports  
+cypress/results/*.json
+cypress/results/*.html
+cypress/results/assets/
+
+# Ambiente
+.env
+.env.local
+
+# ==========================
+#   DOCKER
+# ==========================
+docker-volume/
+*.pid
+*.seed
+*.log
+
+# ==========================
+#   SISTEMA / EDITOR
+# ==========================
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Linux
+*.swp
+*.swo
