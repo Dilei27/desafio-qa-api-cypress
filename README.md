@@ -1,59 +1,71 @@
-# 🌐 Desafio QA — Testes Web com Playwright
+# 🐶 Desafio QA — Testes de API com Cypress
 
-Automação de testes Web para o Blog **Agibank**, utilizando **Playwright**, **Docker** e **GitHub Actions**.
+Automação de testes para a API pública **Dog CEO** (`https://dog.ceo/api`) utilizando **Cypress**, **Docker** e **GitHub Actions**.
 
-Link da Documentação :  https://dilei27.github.io/desafio-qa-web-playwright/
+Link da Documentação : https://dilei27.github.io/desafio-qa-api-cypress/
 
-Os testes garantem o funcionamento da Home e da funcionalidade de busca, validando termos válidos e inválidos.
+Os testes validam os principais endpoints da API, garantindo retorno correto, estrutura adequada e integridade dos dados.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-pages/
-  └── search.page.js
+```
+cypress/
+  ├── e2e/
+  │   └── breeds/
+  │       ├── breedsImages.cy.js
+  │       ├── breedsInvalid.cy.js
+  │       ├── breedsList.cy.js
+  │       └── randomImage.cy.js
+  ├── helpers/
+  │   └── api.js
+  ├── fixtures/
+  │   └── breeds.json
+  └── support/
+      ├── commands.js
+      └── e2e.js
 
-tests/
-  ├── home.spec.js
-  └── search.spec.js
-
-.github/workflows/playwright.yml
 docker-compose.yml
 Dockerfile
-playwright.config.js
+cypress.config.js
 package.json
-mkdocs.yml
-docs/
+```
 
 ---
 
 ## 🚀 Como executar localmente
 
-### 1️⃣ Instalar dependências
+### **1. Instalar dependências**
+```bash
 npm install
+```
 
-### 2️⃣ Executar os testes
-npx playwright test
-
-### 3️⃣ Abrir relatório HTML
-npx playwright show-report
+### **2. Rodar os testes**
+```bash
+npx cypress run
+```
 
 ---
 
 ## 🐳 Executar com Docker
 
+```bash
 docker compose build --no-cache
 docker compose up -d
-docker exec -it desafioqa_web bash
-npx playwright test
+docker exec -it desafioqa_api bash
+npx cypress run
+```
 
 ---
 
-## 📊 Relatórios (Playwright Report)
+## 📊 Relatórios (Mochawesome)
 
-Os relatórios serão gerados em:
+Após a execução, os relatórios serão gerados em:
 
-playwright-report/
+```
+cypress/results/
+```
 
 ---
 
@@ -63,20 +75,23 @@ A pipeline executa automaticamente:
 
 - Instalação do Node.js  
 - Instalação das dependências  
-- Instalação dos browsers  
 - Execução dos testes  
-- Upload do relatório como artefato  
+- Geração do relatório Mochawesome  
+- Upload dos artefatos  
 
-Workflow:
+Arquivo do workflow:
 
-.github/workflows/playwright.yml
+```
+.github/workflows/api-tests.yml
+```
 
 ---
 
 ## 📌 Tecnologias Utilizadas
 
-- Playwright  
+- Cypress  
 - Node.js  
 - Docker  
-- GitHub Actions  
-- Page Object Model (POM)
+- Mochawesome Reports  
+- GitHub Actions
+
