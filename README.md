@@ -2,6 +2,8 @@
 
 Automação de testes para a API pública **Dog CEO** (`https://dog.ceo/api`) utilizando **Cypress**, **Docker** e **GitHub Actions**.
 
+Link da Documentação : https://Dilei27.github.io/desafio-qa-api-cypress/
+
 Os testes validam os principais endpoints da API, garantindo retorno correto, estrutura adequada e integridade dos dados.
 
 ---
