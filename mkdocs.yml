@@ -1,0 +1,30 @@
+site_name: "Testes de API – Cypress"
+theme: 
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggestions
+    - toc.integrated
+  MarkdownExtensions:
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+
+            
+nav:
+  - Home: index.md
+  - Setup: setup.md
+  - Estrutura do projeto: project-structure.md
+  - Testes: tests.md
+  - Docker: docker.md
+  - CI/CD: ci-cd.md
+  - Resultados: results.md
